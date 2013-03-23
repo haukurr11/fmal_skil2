@@ -4,10 +4,6 @@
 (define (inorder n)
     (cond
       ( (equal? n 0) '() )
-        (else(append2 (inorder(- n 1)) (list n) ) ) 
+        (else(append (inorder(- n 1)) (list n) ) ) 
       )
 )
-
-(define (append2 lis1 lis2)
- (if (null? lis1) lis2
-  (cons (car lis1) (append2 (cdr lis1) lis2))))
