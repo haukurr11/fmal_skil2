@@ -10,7 +10,7 @@
 
 (define (shorten_all f lists)
   (if
-    (null? (cdr lists)) (shorten f (car lists))
-  (f (shorten f (car lists)) (shorten_all f (cdr lists)))
+   (null? lists) '() 
+  (map(lambda(x) (shorten f x)) lists)
   )
 )
