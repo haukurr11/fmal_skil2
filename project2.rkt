@@ -31,6 +31,14 @@
 (define (dupl_square lst)
   ( (comp duplicate square ) lst))
 
+;1e
+(define (inorder n)
+    (cond
+      ( (equal? n 0) '() )
+        (else(append (inorder(- n 1)) (list n) ) )
+      )
+)
+
 ;2a
 (define (shorten f lis)
   (if
@@ -62,6 +70,9 @@
 
 ;1d
 (dupl_square '(1 2 3 4))
+
+;1e
+(inorder 6)
 
 ;2a
 (shorten * '(2 4 1 3))
